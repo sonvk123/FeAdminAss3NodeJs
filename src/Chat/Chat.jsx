@@ -7,9 +7,9 @@ import { AuthContext } from "../Context/AuthContext";
 import io from "socket.io-client";
 
 let url =
-  process.env.REACT_APP_NODE_ENV === "production"
-    ? "https://ass3-nodejs-q5t8.onrender.com"
-    : "http://localhost:5000";
+process.env.REACT_APP_NODE_ENV === "production"
+  ? "https://beass3nodejs.onrender.com"
+  : "http://localhost:5000";
 
 function Chat(props) {
   const { user } = useContext(AuthContext);

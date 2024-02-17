@@ -5,10 +5,11 @@ import "./Chat.css";
 import { AuthContext } from "../Context/AuthContext";
 
 import io from "socket.io-client";
-// KHI DELOY
-let url = "https://ass3-nodejs-q5t8.onrender.com";
-// KHI DEV
-// let url = "http://localhost:5000";
+
+let url =
+  process.env.REACT_APP_NODE_ENV === "production"
+    ? "https://ass3-nodejs-q5t8.onrender.com"
+    : "http://localhost:5000";
 
 function Chat(props) {
   const { user } = useContext(AuthContext);

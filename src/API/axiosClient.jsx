@@ -3,10 +3,9 @@ import queryString from "query-string";
 
 
 let url =
-  process.env.REACT_APP_NODE_ENV === "production"
-    ? "https://ass3-nodejs-q5t8.onrender.com/admin"
-    : "http://localhost:5com/admin";
-
+process.env.REACT_APP_NODE_ENV === "production"
+  ? "https://beass3nodejs.onrender.com/admin"
+  : "http://localhost:5000/admin";
 
 const axiosClient = axios.create({
   baseURL: url,
